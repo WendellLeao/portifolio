@@ -57,7 +57,7 @@ a {
     padding-right: 40px;
 }
 
-.homeContainer {
+.home {
     padding-top: 11%;
     padding-right: 13%;
     text-align: right;
@@ -66,7 +66,7 @@ a {
     justify-content: center;
 }
 
-.text {
+.homeText {
     max-width: 42%;
     font-size: 20px;
     padding-right: 7%;
@@ -79,7 +79,11 @@ a {
     /* flex-basis: 40%; */
 }
 
-.aboutContainer {
+.about {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 12%;
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -87,9 +91,40 @@ a {
 .aboutText {
     display: flex;
     text-align: center;
-    align-items: center;
-    justify-content: center;
+    align-items: right;
+    justify-content: right;
     font-size: 25px;
-    padding: 5%;
-    padding-inline: 6%;
+    padding: 8%;
+    max-width: 60%;
+}
+
+.aboutImg {
+    padding-left: 10%;
+}
+
+.games {
+    
+}
+
+.gamesItem {
+    padding-top: 8%;
+    padding-right: 13%;
+    text-align: left;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+.gamesText {
+    display: flex;
+    text-align: center;
+    align-items: right;
+    justify-content: right;
+    font-size: 25px;
+    padding: 8%;
+    max-width: 50%;
+}
+
+.gamesImg {
+    max-width: 35%;
 }
