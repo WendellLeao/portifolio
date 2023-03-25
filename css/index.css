@@ -1,14 +1,14 @@
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     background-color: rgba(12,12,12,255);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
     margin: 0;
 }
 
 h1 {
-    padding-top: 5px;
     text-transform: uppercase;
+    padding-top: 5px;
     color: rgb(0, 153, 255);
     margin: 0;
 }
@@ -51,6 +51,24 @@ a {
     height: 1px;
 }
 
+.center {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.right {
+    justify-content: right;
+    align-items: right;
+    text-align: right;
+}
+
+.left {
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+}
+
 .banner {
     text-align: right;
     padding-top: 40px;
@@ -58,12 +76,12 @@ a {
 }
 
 .home {
-    padding-top: 11%;
-    padding-right: 13%;
     text-align: right;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 11%;
+    padding-right: 13%;
 }
 
 .homeText {
@@ -94,7 +112,7 @@ a {
     align-items: right;
     justify-content: right;
     font-size: 25px;
-    padding: 8%;
+    padding: 10%;
     max-width: 60%;
 }
 
@@ -102,29 +120,35 @@ a {
     padding-left: 10%;
 }
 
-.games {
-    
+.games{
 }
 
-.gamesItem {
-    padding-top: 8%;
-    padding-right: 13%;
-    text-align: left;
+.gamesItem{
+    position: relative;
+    object-fit: cover;
+    overflow: hidden;
     display: flex;
-    align-items: left;
-    justify-content: left;
-}
-
-.gamesText {
-    display: flex;
-    text-align: center;
-    align-items: right;
-    justify-content: right;
-    font-size: 25px;
-    padding: 8%;
-    max-width: 50%;
+    max-height: 700px;
 }
 
 .gamesImg {
-    max-width: 35%;
+    width: 100%;
+}
+
+.gamesText {
+    position: absolute;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 20px;
+    max-width: 25%;
+    margin-left: 50px;
+    height: 100%;
+    padding: 5%;
+}
+
+.gamesTitle {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+    padding-bottom: 30px;
 }
