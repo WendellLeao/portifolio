@@ -71,6 +71,10 @@ nav li {
     margin: 0 10px;
 }
 
+nav li a {
+    font-weight: bold;
+}
+
 nav li a:hover {
     color: rgb(0, 153, 255);
     transition: 0.3s;
@@ -112,7 +116,7 @@ button {
     justify-content: center;
     padding-top: 11%;
     padding-right: 13%;
-    padding-bottom: 5%;
+    padding-bottom: 23%;
 }
 
 .homeText {
@@ -125,22 +129,30 @@ button {
     max-width: 100%;
     border-radius: 10%;
     border: 2px solid rgb(0, 153, 255);
-    /* flex-basis: 40%; */
 }
 
 .about {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-bottom: 5%;
+    padding-inline: 5%;
+}
+
+.about h1 {
     display: flex;
     justify-content: center;
-    margin-top: 12%;
-    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    padding-top: 4%;
 }
 
 .about p {
     display: flex;
-    text-align: center;
+    text-align: justify;
+    text-justify: inter-word;
     font-size: 25px;
-    max-width: 90%;
-    padding: 8%;
 }
 
 .games{
