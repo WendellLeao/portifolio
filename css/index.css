@@ -44,6 +44,7 @@ footer h1 {
 }
 
 footer a {
+    align-items: center;
     display: flex;
     margin: 40px;
 }
@@ -54,6 +55,8 @@ footer img {
 }
 
 footer p {
+    font-weight: bold;
+    padding: 0px 15px;
     font-size: 15px;
 }
 
