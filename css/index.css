@@ -98,6 +98,24 @@ button {
     left: 4%;
 }
 
+.right h1 {
+    justify-content: right;
+    text-align: right;
+}
+
+.left h1 {
+    justify-content: left;
+    text-align: left;
+}
+
+.right img {
+    float: right;
+}
+
+.left img {
+    float: left;
+}
+
 .line {
     background-color: rgb(0, 153, 255);
     height: 1px;
@@ -161,13 +179,14 @@ button {
 
 .gamesItem{
     position: relative;
-    object-fit: cover;
     overflow: hidden;
     display: flex;
 }
 
 .gamesItem img {
+    object-fit: cover;
     width: 100%;
+    height: 800px;
 }
 
 .gamesText {
@@ -175,9 +194,15 @@ button {
     display: block;
     background-color: rgba(0, 0, 0, 0.7);
     font-size: 20px;
-    max-width: 20%;
+    max-width: 18%;
     height: 100%;
     padding: 5%;
+}
+
+.gamesText img {
+    object-fit: contain;
+    width: 160px;
+    height: 90px;
 }
 
 .gamesItem h1 {
@@ -186,6 +211,14 @@ button {
     font-weight: bold;
     font-size: 30px;
     padding-bottom: 30px;
+    width: 100%;
+}
+
+.gamesItem p {
+    margin-top: 0%;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 21px;
 }
 
 .gamesItem button {
@@ -193,10 +226,16 @@ button {
     display: flex;
     background-color: black;
     color: white;
-    border: 1px solid white;
+    border: 2px solid white;
+    border-radius: 5%;
     margin-top: 10%;
     width: 170px;
     height: 50px;
+}
+
+.right button {
+    float: right;
+    margin-right: 13%;
 }
 
 .gamesItem button:hover {
