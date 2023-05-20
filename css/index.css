@@ -206,8 +206,9 @@ button {
 .gamesItem h1 {
     color: white;
     text-transform: uppercase;
+    text-align: center;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 25px;
     padding-bottom: 30px;
     max-width: 100%;
 }
@@ -216,7 +217,12 @@ button {
     margin-top: 0%;
     text-align: justify;
     text-justify: inter-word;
-    font-size: 1.2vw;
+    font-size: 19px;
+}
+
+.gamesItem em {
+    color: rgb(231, 231, 231);
+    font-size: 18px;
 }
 
 .gamesItem button {
