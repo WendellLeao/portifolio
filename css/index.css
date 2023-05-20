@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
@@ -135,6 +139,22 @@ button {
     padding-top: 11%;
     padding-right: 13%;
     padding-bottom: 19%;
+}
+
+.homeContacts {
+    align-items: center;
+    justify-content: right;
+    text-align: right;
+}
+
+.homeContacts a {
+    align-items: center;
+    padding-left: 14px;
+}
+
+.homeContacts img {
+    width: 26px;
+    height: 26px;
 }
 
 .homeText {
