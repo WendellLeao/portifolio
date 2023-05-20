@@ -178,29 +178,10 @@ button {
     position: relative;
     overflow: hidden;
     display: flex;
-    height: 700px;
 }
 
 .gamesItem img {
-    object-fit: cover;
     width: 100%;
-}
-
-.gameDescription {
-    position: absolute;
-    display: block;
-    background-color: rgba(0, 0, 0, 0.7);
-    font-size: 20px;
-    width: 280px;
-    height: 100%;
-    padding: 5%;
-}
-
-.gameDescription img {
-    display: block;
-    object-fit: contain;
-    max-width: 230px;
-    max-height: 160px;
 }
 
 .gamesItem h1 {
@@ -240,6 +221,23 @@ button {
     margin-top: 35px;
     display: flex;
     justify-content: center;
+}
+
+.gameDescription {
+    position: absolute;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 20px;
+    width: 280px;
+    height: 100%;
+    padding: 5%;
+}
+
+.gameDescription img {
+    display: block;
+    object-fit: contain;
+    max-width: 230px;
+    max-height: 160px;
 }
 
 .right button {
