@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="icon" href="./img/profile.jpg">
+    <script src="./js/script.js"></script>
     <title>Wendell Leão</title>
 </head>
 <body background="./img/bg.webp">
@@ -14,10 +15,10 @@
         <nav class="banner">
             <ul>
                 <li>
-                    <a href="#home" onclick="toggle(this)">Início</a>
+                    <a href="#home" onclick="hideAboutElement(this)">Início</a>
                 </li>
                 <li>
-                    <a href="#about" onclick="toggle(this)">Sobre mim</a>
+                    <a href="#about" onclick="hideHomeElement(this)">Sobre mim</a>
                 </li>
                 <li>
                     <a href="#games">Jogos</a>
@@ -73,24 +74,9 @@
             <img class="profile" id="profilePicture" src="./img/profile.jpg">
         </div>
         <div class="about">
-            <button type="submit" onclick="toggle(this)">
-                ABOUT ME
+            <button type="submit" onclick="toggleElements(this)">
+                SOBRE MIM
             </button>
-<script>
-    let toggle = button => {
-    let homeDescription = document.getElementById("homeDescription");
-    let aboutDescription = document.getElementById("aboutDescription");
-    let homeDescriptionIsHidden = homeDescription.getAttribute("hidden");
-
-    if (homeDescriptionIsHidden) {
-        homeDescription.removeAttribute("hidden");
-        aboutDescription.setAttribute("hidden", "hidden");
-    } else {
-        aboutDescription.removeAttribute("hidden", "hidden");
-        homeDescription.setAttribute("hidden", "hidden");
-    }
-  }
-</script>
         </div>
         <div id="games">
             <div class="gamesItem">
