@@ -33,12 +33,16 @@ p {
     font-size: 25px;
 }
 
+header a {
+    font-size: 15px;
+    font-weight: 0;
+}
+
 footer {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: #45dbe9;
 }
 
 footer h1 {
@@ -144,8 +148,13 @@ button {
     align-items: center;
     justify-content: center;
     padding-top: 11%;
-    padding-right: 13%;
-    /* padding-bottom: 19%; */
+    padding-right: 5%;
+}
+
+.homeText {
+    max-width: 60%;
+    font-size: 20px;
+    padding-right: 3%;
 }
 
 .homeContacts {
@@ -164,12 +173,6 @@ button {
     height: 26px;
 }
 
-.homeText {
-    max-width: 60%;
-    font-size: 20px;
-    padding-right: 7%;
-}
-
 .profile {
     max-width: 100%;
     border-radius: 10%;
@@ -183,20 +186,25 @@ button {
     text-align: center;
 }
 
+.about button {
+    background-color: black;
+    color: #45dbe9;
+    border: 2px solid #45dbe9;
+    font-weight: bold;
+    border-radius: 5%;
+    width: 230px;
+    height: 60px;
+    font-size: 20px;
+}
+
+.about button:hover {
+    background-color: #45dbe9;
+    color: black;
+}
+
 .about img {
     width: 230px;
     height: 60px;
-}
-
-.aboutTitle {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: white;
-    padding-top: 4%;
-    font-size: 28px;
 }
 
 .about p {
@@ -229,7 +237,7 @@ button {
 .gamesItem p {
     margin-top: 0%;
     text-align: justify;
-    text-justify: inter-word;
+    text-justify: distribute;
     font-size: 19px;
 }
 
@@ -258,7 +266,9 @@ button {
 .gameDescription {
     position: absolute;
     display: block;
-    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 1px solid #45dbe950;
     font-size: 20px;
     width: 280px;
     height: 100%;
@@ -268,8 +278,8 @@ button {
 .gameDescription img {
     display: block;
     object-fit: contain;
-    max-width: 230px;
-    max-height: 160px;
+    max-width: 200px;
+    max-height: 130px;
 }
 
 .right button {

@@ -14,10 +14,10 @@
         <nav class="banner">
             <ul>
                 <li>
-                    <a href="#home">Início</a>
+                    <a href="#home" onclick="toggle(this)">Início</a>
                 </li>
                 <li>
-                    <a href="#about">Sobre mim</a>
+                    <a href="#about" onclick="toggle(this)">Sobre mim</a>
                 </li>
                 <li>
                     <a href="#games">Jogos</a>
@@ -59,7 +59,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="justify" id="aboutDescription" hidden>
+                <div id="aboutDescription" class="justify" hidden>
                     <h1>
                         Sobre mim
                     </h1>
@@ -73,8 +73,11 @@
             <img class="profile" id="profilePicture" src="./img/profile.jpg">
         </div>
         <div class="about">
+            <button type="submit" onclick="toggle(this)">
+                ABOUT ME
+            </button>
 <script>
-   let toggle = button => {
+    let toggle = button => {
     let homeDescription = document.getElementById("homeDescription");
     let aboutDescription = document.getElementById("aboutDescription");
     let homeDescriptionIsHidden = homeDescription.getAttribute("hidden");
@@ -88,20 +91,7 @@
     }
   }
 </script>
-            <a onclick="toggle(this)">
-                <img src="./img/steam.png">
-            </a>
         </div>
-        <!-- <div class="about" id="about">
-            <div class="aboutTitle">
-                About me
-            </div>
-            <p>
-                I've been working as a professional game developer for over two years using the Unity3D graphics engine and the C# programming language. 
-                I'm currently working on a team of Brazilian developers working as a Netcode programmer on the game Rogue Masters. In addition to this project, 
-                I've been working alone on a cooperative horror game for up to 4 people.
-            </p>
-        </div> -->
         <div id="games">
             <div class="gamesItem">
                 <img src="./img/games/rogue.png">
