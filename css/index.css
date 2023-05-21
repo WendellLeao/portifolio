@@ -38,7 +38,7 @@ header a {
     font-weight: 0;
 }
 
-footer {
+footer ul {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -96,9 +96,28 @@ button {
     justify-content: center;
     transition-duration: 0.4s;
     cursor: pointer;
+    background-color: black;
+    color: #45dbe9;
+    border: 2px solid #45dbe9;
+    font-weight: bold;
+    border-radius: 5%;
+    width: 230px;
+    height: 60px;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #45dbe9;
+    color: black;
 }
 
 /* Classes */
+.center {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
 .right {
     right: 4%;
 }
@@ -186,22 +205,6 @@ button {
     text-align: center;
 }
 
-.about button {
-    background-color: black;
-    color: #45dbe9;
-    border: 2px solid #45dbe9;
-    font-weight: bold;
-    border-radius: 5%;
-    width: 230px;
-    height: 60px;
-    font-size: 20px;
-}
-
-.about button:hover {
-    background-color: #45dbe9;
-    color: black;
-}
-
 .about img {
     width: 230px;
     height: 60px;
@@ -225,20 +228,23 @@ button {
 }
 
 .gamesItem h1 {
-    color: white;
+    color: #45dbe9;
     text-transform: uppercase;
-    text-align: center;
     font-weight: bold;
     font-size: 25px;
-    padding-bottom: 30px;
     max-width: 100%;
+    padding-top: 30px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 5px;
 }
 
 .gamesItem p {
-    margin-top: 0%;
     text-align: justify;
     text-justify: distribute;
     font-size: 19px;
+    padding-right: 50px;
+    padding-left: 50px;
 }
 
 .gamesItem em {
@@ -258,7 +264,6 @@ button {
 }
 
 .gamesItemButton {
-    margin-top: 35px;
     display: flex;
     justify-content: center;
 }
@@ -267,23 +272,31 @@ button {
     position: absolute;
     display: block;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.9);
-    border: 1px solid #45dbe950;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-bottom: 8px solid #45dbe9;
+    backdrop-filter: blur(6px);
     font-size: 20px;
-    width: 280px;
-    height: 100%;
-    padding: 5%;
+    width: 900px;
+    height: 380px;
+    margin-top: 630px;
 }
 
 .gameDescription img {
-    display: block;
-    object-fit: contain;
+    padding-top: 25px;
+    max-width: 200px;
+    max-height: 130px;
+}
+
+.gameDescription button {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 25px;
     max-width: 200px;
     max-height: 130px;
 }
 
 .right button {
-    float: right;
     margin-right: 13%;
 }
 
@@ -294,6 +307,15 @@ button {
 .gamesItem button:disabled {
     opacity: 0.5;
     cursor: default;
+}
+
+.footerHomeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 60px;
 }
 
 /*Filter styles*/
