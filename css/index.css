@@ -1,3 +1,4 @@
+/* HTML */
 html {
     scroll-behavior: smooth;
 }
@@ -31,6 +32,11 @@ a {
 
 p {
     font-size: 25px;
+}
+
+mark.blue {
+    background: none;
+    color: #45dbe9;
 }
 
 header a {
@@ -320,6 +326,45 @@ button:hover {
     text-align: center;
     padding-top: 35px;
     padding-bottom: 60px;
+}
+
+/* Animations */
+.slideH1 {
+    position: relative;
+    animation: slideLeft 0.4s;
+}
+
+.slideH2 {
+    position: relative;
+    animation: slideLeft 1s;
+}
+
+.slideDescription {
+    position: relative;
+    animation: slideLeft 1.5s;
+}
+
+.slideContacts {
+    position: relative;
+    animation: slideLeft 1.6s;
+}
+
+.slideProfile {
+    position: relative;
+    animation: slideRight 0.8s;
+}
+
+@keyframes slideLeft {
+    from { clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); }
+    to { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(0%); }
+}
+
+@keyframes slideRight {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0%); }
 }
 
 /*Filter styles*/
