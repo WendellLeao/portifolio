@@ -281,6 +281,10 @@ button:hover {
     margin-top: 630px;
 }
 
+.gameDescription h1 {
+    font-size: 35px;
+}
+
 .gameDescription img {
     padding-top: 25px;
     max-width: 200px;
