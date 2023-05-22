@@ -283,7 +283,7 @@ button:hover {
     backdrop-filter: blur(6px);
     font-size: 20px;
     width: 650px;
-    top: 3%;
+    bottom: 30px;
 }
 
 .gameDescription h1 {
