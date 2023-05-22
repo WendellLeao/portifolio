@@ -279,11 +279,11 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.75);
     border-bottom: 7px solid #45dbe9;
     flex-direction: column;
-    min-height: 390px;
+    min-height: 300px;
     backdrop-filter: blur(6px);
     font-size: 20px;
-    width: 750px;
-    top: 0;
+    width: 650px;
+    top: 3%;
 }
 
 .gameDescription h1 {
@@ -292,9 +292,9 @@ button:hover {
 }
 
 .gameDescription img {
-    margin-top: 25px;
     max-width: 200px;
     max-height: 130px;
+    padding-bottom: 5px;
 }
 
 .gameDescription img:hover {
