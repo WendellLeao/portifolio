@@ -126,12 +126,10 @@ button:hover {
 
 .right {
     right: 4%;
-    border-right: 5px solid #45dbe9;
 }
 
 .left {
     left: 4%;
-    border-left: 5px solid #45dbe9;
 }
 
 .right h1 {
@@ -204,6 +202,10 @@ button:hover {
     color: #45dbe9;
     text-transform: none;
     font-size: 25px;
+}
+
+.aboutDescription a:hover {
+    color: white;
 }
 
 .profile {
@@ -288,9 +290,15 @@ button:hover {
 }
 
 .gameDescription img {
-    padding-top: 25px;
+    margin-top: 25px;
     max-width: 200px;
     max-height: 130px;
+}
+
+.gameDescription img:hover {
+    border: 2px solid white;
+    border-radius: 10%;
+    padding: 0px;
 }
 
 .gameDescription button {
