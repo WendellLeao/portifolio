@@ -424,25 +424,55 @@ button:hover {
     100% { transform: translateX(0%); }
 }
 
-.eraseable {
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+  
+#wrapper * {
+    margin: 5px;
+}
+
+.heading {
+    font-size: 3em;
+    padding: 10px 5px;
+  }
+  
+.caption {
+    padding: 5px;
+}
+  
+.animatable {
+    position: relative;
     clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-    animation: .75s cubic-bezier(1,-0.01,.12,.8) 1s 1 eraseAnimation forwards;
+    animation: .55s cubic-bezier(1,-0.01,.12,.8) 0s 1 reveal forwards;
 }
-
-.reveable {
-    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-    animation: .75s cubic-bezier(1,-0.01,.12,.8) 1s 1 reveal forwards;
+  
+.animatable::after {
+    content: '';
+    position: absolute;
+    background: #45dbe9;
+    padding: inherit;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    animation: .55s cubic-bezier(1,-0.01,.12,.8) 0.5s 1 hideBlack forwards;
 }
-
-@keyframes eraseAnimation {
-    from { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
-    to { clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%); }
-}
-
+  
 @keyframes reveal {
     from { clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); }
     to { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
-  }
+}
+  
+@keyframes hideBlack {
+    from { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+    to { clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%); }
+}
 
 /*Filter styles*/
 .saturate { filter: saturate(3); }
