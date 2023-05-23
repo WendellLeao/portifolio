@@ -88,9 +88,12 @@ nav li {
 
 nav li a {
     font-weight: bold;
+    padding-bottom: 6px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
 }
 
 nav li a:hover {
+    border-bottom: 2px solid #45dbe9;
     color: #45dbe9;
 }
 
@@ -199,6 +202,12 @@ button:hover {
 .homeContacts img {
     width: 26px;
     height: 26px;
+    padding-bottom: 6px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0);
+}
+
+.homeContacts img:hover {
+    border-bottom: 3px solid #45dbe9;
 }
 
 .aboutDescription a {
