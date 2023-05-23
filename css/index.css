@@ -377,8 +377,16 @@ button:hover {
     padding-bottom: 60px;
 }
 
+.title {
+
+}
+
+.title::after {
+    background-color: red;
+}
+
 /* Animations */
-.slideH1 {
+/* .slideH1 {
     position: relative;
     animation: slideLeft 0.4s;
 }
@@ -401,7 +409,7 @@ button:hover {
 .slideProfile {
     position: relative;
     animation: slideRight 0.8s;
-}
+} */
 
 @keyframes slideLeft {
     from { clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); }
@@ -415,6 +423,26 @@ button:hover {
     0% { transform: translateX(-100%); }
     100% { transform: translateX(0%); }
 }
+
+.eraseable {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    animation: .75s cubic-bezier(1,-0.01,.12,.8) 1s 1 eraseAnimation forwards;
+}
+
+.reveable {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    animation: .75s cubic-bezier(1,-0.01,.12,.8) 1s 1 reveal forwards;
+}
+
+@keyframes eraseAnimation {
+    from { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+    to { clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%); }
+}
+
+@keyframes reveal {
+    from { clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); }
+    to { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+  }
 
 /*Filter styles*/
 .saturate { filter: saturate(3); }
