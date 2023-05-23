@@ -49,6 +49,9 @@ footer ul {
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding-top: 20px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 footer h1 {
@@ -89,7 +92,7 @@ nav li {
 nav li a {
     font-weight: bold;
     padding-bottom: 6px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    border-bottom: 2px solid transparent;
 }
 
 nav li a:hover {
@@ -200,14 +203,14 @@ button:hover {
 }
 
 .homeContacts img {
+    border-bottom: 2px solid transparent;
     width: 26px;
     height: 26px;
-    padding-bottom: 6px;
-    border-bottom: 3px solid rgba(255, 255, 255, 0);
+    padding-bottom: 7px;
 }
 
 .homeContacts img:hover {
-    border-bottom: 3px solid #45dbe9;
+    border-bottom: 2px solid #45dbe9;
 }
 
 .aboutDescription a {
@@ -354,12 +357,23 @@ button:hover {
     cursor: default;
 }
 
+.footerContact {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid transparent;
+}
+
+.footerContact:hover {
+    border-bottom: 2px solid #45dbe9;
+}
+
 .footerHomeButton {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 35px;
+    padding-top: 25px;
     padding-bottom: 60px;
 }
 
