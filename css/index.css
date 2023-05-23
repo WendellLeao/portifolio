@@ -386,7 +386,7 @@ button:hover {
 }
 
 /* Animations */
-/* .slideH1 {
+.slideH1 {
     position: relative;
     animation: slideLeft 0.4s;
 }
@@ -409,7 +409,7 @@ button:hover {
 .slideProfile {
     position: relative;
     animation: slideRight 0.8s;
-} */
+}
 
 @keyframes slideLeft {
     from { clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); }
