@@ -191,6 +191,12 @@ button:hover {
     padding-right: 3%;
 }
 
+.homeDescriptionH2 {
+    margin-left: auto; 
+    margin-right: 0;
+    width: 160px;
+}
+
 .homeContacts {
     align-items: center;
     justify-content: right;
@@ -377,14 +383,6 @@ button:hover {
     padding-bottom: 60px;
 }
 
-.title {
-
-}
-
-.title::after {
-    background-color: red;
-}
-
 /* Animations */
 .slideH1 {
     position: relative;
@@ -398,12 +396,12 @@ button:hover {
 
 .slideDescription {
     position: relative;
-    animation: slideLeft 1.1s;
+    animation: slideLeft 1s;
 }
 
 .slideContacts {
     position: relative;
-    animation: slideLeft 1.2s;
+    animation: slideLeft 0.8s;
 }
 
 .slideProfile {
@@ -423,35 +421,13 @@ button:hover {
     0% { transform: translateX(-100%); }
     100% { transform: translateX(0%); }
 }
-
-#wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-}
-  
-#wrapper * {
-    margin: 5px;
-}
-
-.heading {
-    font-size: 3em;
-    padding: 10px 5px;
-  }
-  
-.caption {
-    padding: 5px;
-}
   
 .animatable {
     position: relative;
     clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-    animation: .55s cubic-bezier(1,-0.01,.12,.8) 0s 1 reveal forwards;
+    animation: .3s cubic-bezier(1,-0.01,.12,.8) 0s 1 reveal forwards;
 }
-  
+
 .animatable::after {
     content: '';
     position: absolute;
@@ -461,7 +437,7 @@ button:hover {
     height: 100%;
     top: 0;
     left: 0;
-    animation: .55s cubic-bezier(1,-0.01,.12,.8) 0.5s 1 hideBlack forwards;
+    animation: .4s cubic-bezier(1,-0.01,.12,.8) 0.3s 1 hideBlack forwards;
 }
   
 @keyframes reveal {
