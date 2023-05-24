@@ -396,12 +396,12 @@ button:hover {
 
 .slideDescription {
     position: relative;
-    animation: slideLeft 1s;
+    animation: slideLeft 0.8s;
 }
 
 .slideContacts {
     position: relative;
-    animation: slideLeft 0.8s;
+    animation: slideLeft 0.7s;
 }
 
 .slideProfile {
@@ -426,6 +426,14 @@ button:hover {
     position: relative;
     clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
     animation: .3s cubic-bezier(1,-0.01,.12,.8) 0s 1 reveal forwards;
+}
+
+.homeDescriptionH2 .animatable{
+    animation: .3s cubic-bezier(1,-0.01,.12,.8) 0.4s 1 reveal forwards;
+}
+
+.homeDescriptionH2 .animatable::after{
+    animation: .4s cubic-bezier(1,-0.01,.12,.8) 0.7s 1 hideBlack forwards;
 }
 
 .animatable::after {

@@ -16,8 +16,7 @@ function hideAboutElement(){
     homeElement.removeAttribute("hidden");
     aboutElement.setAttribute("hidden", "hidden");
 
-    var aboutButton = document.getElementById("aboutButton");
-    aboutButton.innerText = "+ Sobre mim"
+    setAboutButtonText("+ Sobre mim");
 }
 
 function hideHomeElement(){
@@ -27,6 +26,11 @@ function hideHomeElement(){
     aboutElement.removeAttribute("hidden");
     homeElement.setAttribute("hidden", "hidden");
     
+    setAboutButtonText("Voltar");
+}
+
+function setAboutButtonText(text){
     var aboutButton = document.getElementById("aboutButton");
-    aboutButton.innerText = "Voltar"
+    
+    aboutButton.innerText = text;
 }
