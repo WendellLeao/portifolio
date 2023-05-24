@@ -110,7 +110,7 @@ button {
     color: #45dbe9;
     border: 2px solid #45dbe9;
     font-weight: bold;
-    border-radius: 5%;
+    border-radius: 2%;
     width: 230px;
     height: 60px;
     font-size: 20px;
@@ -165,8 +165,12 @@ button:hover {
 }
 
 .steamLogo {
-    outline: 2px solid white;
-    border-radius: 8%;
+    outline: 1px solid white;
+    border-radius: 2%;
+}
+
+.itchLogo {
+    border-radius: 2%;
 }
 
 .banner {
@@ -278,8 +282,8 @@ button:hover {
 .gamesItem button {
     background-color: black;
     color: white;
-    border: 2px solid white;
-    border-radius: 5%;
+    border: 1px solid white;
+    border-radius: 2%;
     font-size: 17px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -333,8 +337,8 @@ button:hover {
 }
 
 .gameDescription img:hover {
-    outline: 3px solid #45dbe9;
-    border-radius: 8%;
+    outline: 2px solid #45dbe9;
+    border-radius: 2%;
 }
 
 .gameDescription button {
