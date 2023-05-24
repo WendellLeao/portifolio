@@ -386,22 +386,22 @@ button:hover {
 /* Animations */
 .slideH1 {
     position: relative;
-    animation: slideLeft 0.4s;
+    animation: slideRevealLeft 0.4s;
 }
 
 .slideH2 {
     position: relative;
-    animation: slideLeft 0.6s;
+    animation: slideRevealLeft 0.6s;
 }
 
 .slideDescription {
     position: relative;
-    animation: slideLeft 0.8s;
+    animation: slideRevealLeft 0.8s;
 }
 
 .slideContacts {
     position: relative;
-    animation: slideLeft 0.7s;
+    animation: slideRevealLeft 0.7s;
 }
 
 .slideProfile {
@@ -409,10 +409,15 @@ button:hover {
     animation: slideRight 0.8s;
 }
 
-@keyframes slideLeft {
+@keyframes slideRevealLeft {
     from { clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); }
     to { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
 
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(0%); }
+}
+
+@keyframes slideLeft {
     0% { transform: translateX(100%); }
     100% { transform: translateX(0%); }
 }

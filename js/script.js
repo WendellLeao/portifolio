@@ -17,6 +17,8 @@ function hideAboutElement(){
     aboutElement.setAttribute("hidden", "hidden");
 
     setAboutButtonText("+ Sobre mim");
+
+    slideProfilePicture("slideLeft");
 }
 
 function hideHomeElement(){
@@ -27,10 +29,18 @@ function hideHomeElement(){
     homeElement.setAttribute("hidden", "hidden");
     
     setAboutButtonText("Voltar");
+
+    slideProfilePicture("slideRight");
 }
 
 function setAboutButtonText(text){
     var aboutButton = document.getElementById("aboutButton");
     
     aboutButton.innerText = text;
+}
+
+function slideProfilePicture(side){
+    var profileContainer = document.getElementById('profileContainer');
+
+    profileContainer.style.animation= side += " 0.2s linear";
 }
