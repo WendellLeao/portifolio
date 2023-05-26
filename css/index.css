@@ -246,6 +246,10 @@ button:hover {
     text-align: center;
 }
 
+.games {
+    background-color: black;
+}
+
 .gamesItem{
     position: relative;
 }
@@ -297,7 +301,6 @@ button:hover {
 }
 
 .gameVideo {
-    max-height: 20%;
 }
 
 .gameDescription {
