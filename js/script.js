@@ -168,8 +168,10 @@ function LocalizePage(languageIndex){
 Initialize();
 
 //TOGGLE ELEMENTS
+let homeElement = document.getElementById("homeDescription");
+let aboutElement = document.getElementById("aboutDescription");
+
 function toggleElements(){
-    let homeElement = document.getElementById("homeDescription");
     let homeElementIsHidden = homeElement.getAttribute("hidden");
 
     if (homeElementIsHidden){
@@ -181,9 +183,6 @@ function toggleElements(){
 }
 
 function hideAboutElement(){
-    let homeElement = document.getElementById("homeDescription");
-    let aboutElement = document.getElementById("aboutDescription");
-
     homeElement.removeAttribute("hidden");
     aboutElement.setAttribute("hidden", "hidden");
 
@@ -192,9 +191,6 @@ function hideAboutElement(){
 }
 
 function hideHomeElement(){
-    let aboutElement = document.getElementById("aboutDescription");
-    let homeElement = document.getElementById("homeDescription");
-    
     aboutElement.removeAttribute("hidden");
     homeElement.setAttribute("hidden", "hidden");
     
