@@ -332,6 +332,11 @@ button:hover {
     font-size: 18px;
 }
 
+.gameDescription em p {
+    font-size: 16px;
+    padding-bottom: 8px;
+}
+
 .gameDescription img {
     max-width: 200px;
     max-height: 130px;
@@ -440,12 +445,20 @@ button:hover {
     animation: .3s cubic-bezier(1,-0.01,.12,.8) 0s 1 reveal forwards;
 }
 
+.homeDescriptionContainer p {
+    width: 600px;
+}
+
 .homeDescriptionH2 .animatable{
     animation: .3s cubic-bezier(1,-0.01,.12,.8) 0.4s 1 reveal forwards;
 }
 
 .homeDescriptionH2 .animatable::after{
     animation: .4s cubic-bezier(1,-0.01,.12,.8) 0.7s 1 hideBlack forwards;
+}
+
+.aboutDescription p {
+    width: 900px;
 }
 
 .animatable::after {
