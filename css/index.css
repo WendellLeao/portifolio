@@ -192,6 +192,7 @@ button:hover {
 }
 
 .languages img {
+    margin-top: 8px;
     width: 28px;
     height: 28px;
 }

@@ -1,6 +1,7 @@
+//LOCALIZATION
 let languages = document.querySelector(".languages");
 let link = document.querySelectorAll(".languages a");
-let attr = document.querySelector(".languages .active").getAttribute("language");
+let attr = localStorage.getItem("language");
 
 let homeNavButton = document.querySelector(".banner .homeNavButton");
 let aboutMeNavButton = document.querySelector(".banner .aboutMeNavButton");
@@ -30,46 +31,12 @@ let jumpDescription = document.querySelector(".jump .gameDescriptionText");
 let goHomeButtonText = document.querySelector(".footerHomeButton button");
 let developmentGameButton = document.querySelector(".gamesItemButton button");
 
-link.forEach(el => {
-     el.addEventListener("click", () => {
-        languages.querySelector(".active").classList.remove("active");
-        el.classList.add("active");
-
-        attr = el.getAttribute("language");
-
-        homeNavButton.textContent = data[attr].homeNavButton;
-        aboutMeNavButton.textContent = data[attr].aboutMeNavButton;
-        gamesNavButton.textContent = data[attr].gamesNavButton;
-        contactsNavButton.textContent = data[attr].contactsNavButton;
-        homeSubTitle.textContent = data[attr].homeSubTitle;
-        homeDescription.textContent = data[attr].homeDescription;
-        aboutSubTitle.textContent = data[attr].aboutSubTitle;
-        aboutDescription.textContent = data[attr].aboutDescription;
-        aboutButtonText.textContent = data[attr].aboutButtonText;
-        rogueSynopsis.textContent = data[attr].rogueSynopsis;
-        rogueDescription.textContent = data[attr].rogueDescription;
-        horrorSynopis.textContent = data[attr].horrorSynopis;
-        horrorDescription.textContent = data[attr].horrorDescription;
-        origensSynopsis.textContent = data[attr].origensSynopsis;
-        origensDescription.textContent = data[attr].origensDescription;
-        arrowSynopsis.textContent = data[attr].arrowSynopsis;
-        arrowDescription.textContent = data[attr].arrowDescription;
-        overthrowSynopsis.textContent = data[attr].overthrowSynopsis;
-        overthrowDescription.textContent = data[attr].overthrowDescription;
-        claudioSynopsis.textContent = data[attr].claudioSynopsis;
-        claudioDescription.textContent = data[attr].claudioDescription;
-        fruitsSynopsis.textContent = data[attr].fruitsSynopsis;
-        fruitsDescription.textContent = data[attr].fruitsDescription;
-        jumpSynopsis.textContent = data[attr].jumpSynopsis;
-        jumpDescription.textContent = data[attr].jumpDescription;
-        goHomeButtonText.textContent = data[attr].goHomeButtonText;
-        developmentGameButton.textContent = data[attr].developmentGameButton;
-     })
-})
+const languageItem = "language";
+const defaultLanguage = "english";
 
 let data = {
-     english: 
-     {
+    english: 
+    {
         homeNavButton: "Home",
         aboutMeNavButton: "About me",
         gamesNavButton: "Games",
@@ -98,9 +65,9 @@ let data = {
         jumpDescription: "This project is a remake of the first game I've ever developed. The goal was to compare how much I evolved as a programmer in a one-year period of studies. I did the whole game myself.",
         goHomeButtonText: "Home" ,
         developmentGameButton: "In development!",
-     },
-     portuguese: 
-     {
+    },
+    portuguese: 
+    {
         homeNavButton: "Início",
         aboutMeNavButton: "Sobre mim",
         gamesNavButton: "Jogos",
@@ -129,9 +96,78 @@ let data = {
         jumpDescription: "Esse projeto é um remake do primeiro jogo que eu já desenvolvi. O objetivo foi comparar o quanto eu evolui como programador em um período de um ano de estudos. Fiz o jogo inteiro sozinho.",
         goHomeButtonText: "Início",
         developmentGameButton: "Em desenvolvimento!",
-     }
+    }
 }
 
+link.forEach(el => {
+    el.addEventListener("click", () => {
+        if(languages.querySelector(".active") != null){
+            languages.querySelector(".active").classList.remove("active");
+        }
+
+        el.classList.add("active");
+
+        attr = el.getAttribute(languageItem);
+        localStorage.setItem(languageItem, attr);
+
+        console.log("Translate page to: " + attr);
+
+        LocalizePage(attr);
+    })
+})
+
+function Initialize(){
+    if(attr == null){
+        console.log("Setting default language: " + defaultLanguage)
+
+        localStorage.setItem(languageItem, defaultLanguage);
+        attr = localStorage.getItem(languageItem);
+    }
+
+    link.forEach(el => {
+        if(el.getAttribute(languageItem) == attr){
+            el.classList.add("active");
+        }
+    })
+    
+    console.log("Initialize page in: " + attr);
+
+    LocalizePage(attr);
+}
+
+function LocalizePage(languageIndex){
+    homeNavButton.textContent = data[languageIndex].homeNavButton;
+    aboutMeNavButton.textContent = data[languageIndex].aboutMeNavButton;
+    gamesNavButton.textContent = data[languageIndex].gamesNavButton;
+    contactsNavButton.textContent = data[languageIndex].contactsNavButton;
+    homeSubTitle.textContent = data[languageIndex].homeSubTitle;
+    homeDescription.textContent = data[languageIndex].homeDescription;
+    aboutSubTitle.textContent = data[languageIndex].aboutSubTitle;
+    aboutDescription.textContent = data[languageIndex].aboutDescription;
+    aboutButtonText.textContent = data[languageIndex].aboutButtonText;
+    rogueSynopsis.textContent = data[languageIndex].rogueSynopsis;
+    rogueDescription.textContent = data[languageIndex].rogueDescription;
+    horrorSynopis.textContent = data[languageIndex].horrorSynopis;
+    horrorDescription.textContent = data[languageIndex].horrorDescription;
+    origensSynopsis.textContent = data[languageIndex].origensSynopsis;
+    origensDescription.textContent = data[languageIndex].origensDescription;
+    arrowSynopsis.textContent = data[languageIndex].arrowSynopsis;
+    arrowDescription.textContent = data[languageIndex].arrowDescription;
+    overthrowSynopsis.textContent = data[languageIndex].overthrowSynopsis;
+    overthrowDescription.textContent = data[languageIndex].overthrowDescription;
+    claudioSynopsis.textContent = data[languageIndex].claudioSynopsis;
+    claudioDescription.textContent = data[languageIndex].claudioDescription;
+    fruitsSynopsis.textContent = data[languageIndex].fruitsSynopsis;
+    fruitsDescription.textContent = data[languageIndex].fruitsDescription;
+    jumpSynopsis.textContent = data[languageIndex].jumpSynopsis;
+    jumpDescription.textContent = data[languageIndex].jumpDescription;
+    goHomeButtonText.textContent = data[languageIndex].goHomeButtonText;
+    developmentGameButton.textContent = data[languageIndex].developmentGameButton;
+}
+
+Initialize();
+
+//TOGGLE ELEMENTS
 function toggleElements(){
     let homeElement = document.getElementById("homeDescription");
     let homeElementIsHidden = homeElement.getAttribute("hidden");
@@ -152,7 +188,6 @@ function hideAboutElement(){
     aboutElement.setAttribute("hidden", "hidden");
 
     slideProfilePicture("slideLeft");
-
     setAboutButtonText(false);
 }
 
@@ -164,7 +199,6 @@ function hideHomeElement(){
     homeElement.setAttribute("hidden", "hidden");
     
     slideProfilePicture("slideRight");
-
     setAboutButtonText(true);
 }
 
@@ -177,8 +211,8 @@ function slideProfilePicture(side){
 function setAboutButtonText(homeElementIsHidden){
     if(homeElementIsHidden == true){
         aboutButtonText.textContent = data[attr].backButtonText;
+        return;
     }
-    else{
-        aboutButtonText.textContent = data[attr].aboutButtonText;
-    }
+    
+    aboutButtonText.textContent = data[attr].aboutButtonText;
 }
