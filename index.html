@@ -10,27 +10,33 @@
 </head>
 <body background="./img/bg.webp">
     <header id="home">
-        <div class="langs">
-            <a href="#" language="english">ENG</a>
-            <a href="#" language="portuguese">PT-BR</a>
-        </div>
         <div class="line"></div>
-        <nav class="banner">
-            <ul>
-                <li>
-                    <a class="homeNavButton" href="#home" onclick="hideAboutElement(this)">Home</a>
-                </li>
-                <li>
-                    <a class="aboutMeNavButton" href="#about" onclick="hideHomeElement(this)">About me</a>
-                </li>
-                <li>
-                    <a class="gamesNavButton" href="#games">Games</a>
-                </li>
-                <li>
-                    <a class="contactsNavButton" href="#contact">Contacts</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="banner">
+            <nav>
+                <ul>
+                    <li>
+                        <a class="homeNavButton" href="#home" onclick="hideAboutElement(this)">Home</a>
+                    </li>
+                    <li>
+                        <a class="aboutMeNavButton" href="#about" onclick="hideHomeElement(this)">About me</a>
+                    </li>
+                    <li>
+                        <a class="gamesNavButton" href="#games">Games</a>
+                    </li>
+                    <li>
+                        <a class="contactsNavButton" href="#contact">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="languages">
+                <a href="#" language="english" class="active">
+                    <img src="./img/usa.png" alt="">
+                </a>
+                <a href="#" language="portuguese">
+                    <img src="./img/brazil.png" alt="">
+                </a>
+            </div>
+        </div>
     </header>
     <main>
         <div class="home">

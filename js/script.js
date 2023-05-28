@@ -1,5 +1,5 @@
-// let langs = document.querySelector(".langs");
-let link = document.querySelectorAll(".langs a");
+let langs = document.querySelector(".languages");
+let link = document.querySelectorAll(".languages a");
 
 let homeNavButton = document.querySelector(".banner .homeNavButton");
 let aboutMeNavButton = document.querySelector(".banner .aboutMeNavButton");
@@ -31,8 +31,8 @@ let developmentGameButton = document.querySelector(".gamesItemButton button");
 
 link.forEach(el=>{
      el.addEventListener("click", () => {
-        // langs.querySelector(".active").classList.remove("active");
-        // el.classList.add("active");
+        langs.querySelector(".active").classList.remove("active");
+        el.classList.add("active");
 
         let attr = el.getAttribute("language")
 
@@ -78,6 +78,7 @@ let data = {
         aboutSubTitle: "About me",
         aboutDescription: "I have been working professionally as a game developer for over two years using the Unity and C# graphics engine. I am currently working with a team of Brazilian developers on the game Rogue Masters, acting as a networking programmer.",
         aboutButtonText: "About me",
+        backButtonText: "Back",
         rogueSynopsis: "Rogue Masters is a cooperative game of up to 6 players with souls-like style combat.",
         rogueDescription: "That's the project I'm currently working on. I work mainly in the networking part, I am responsible for the synchronization of the gameplay mechanics and for the development and optimization in the infrastructure of the project code.",
         horrorSynopis: "Where Are You is a cooperative horror game with support of up to 4 players. Your goal is to investigate haunted houses and exorcise the ghost that haunts them.",
@@ -101,13 +102,14 @@ let data = {
      {
         homeNavButton: "Início",
         aboutMeNavButton: "Sobre mim",
-        gamesNavButton: "Games",
-        contactsNavButton: "Contacts",
+        gamesNavButton: "Jogos",
+        contactsNavButton: "Contatos",
         homeSubTitle: "Game Developer",
         homeDescription: "Eu sou um programador de 21 anos de idade, apaixonado por tecnologia, um grande amante de café e apreciador de jogos souls-like.",
         aboutSubTitle: "Sobre mim",
         aboutDescription: "Eu trabalho profissionalmente como desenvolvedor de jogos a mais de dois anos usando o motor gráfico Unity e C#. Atualmente estou trabalhando com um time de desenvolvedores brasileiros no jogo Rogue Masters, atuando como programador de networking.",
         aboutButtonText: "Sobre mim",
+        backButtonText: "About me",
         rogueSynopsis: "Rogue Masters é um jogo cooperativo de até 6 jogadores com combate estilo souls-like.",
         rogueDescription: "Esse é o projeto que estou trabalhando atualmente. Eu atuo principalmente na parte de networking, sou responsável pela sincronização das mecânicas de gameplay e pelo desenvolvimento e otimização na infraestrutura do código do projeto.",
         horrorSynopis: "Where Are You é um jogo de terror cooperativo com suporte de até 4 jogadores. Seu objetivo é investigar casas mal assombradas e exorcizar o fantasma que a assombra.",
@@ -147,8 +149,6 @@ function hideAboutElement(){
     homeElement.removeAttribute("hidden");
     aboutElement.setAttribute("hidden", "hidden");
 
-    setAboutButtonText("+ Sobre mim");
-
     slideProfilePicture("slideLeft");
 }
 
@@ -159,15 +159,7 @@ function hideHomeElement(){
     aboutElement.removeAttribute("hidden");
     homeElement.setAttribute("hidden", "hidden");
     
-    setAboutButtonText("Voltar");
-
     slideProfilePicture("slideRight");
-}
-
-function setAboutButtonText(text){
-    var aboutButton = document.getElementById("aboutButton");
-    
-    aboutButton.innerText = text;
 }
 
 function slideProfilePicture(side){
