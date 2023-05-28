@@ -1,5 +1,6 @@
-let langs = document.querySelector(".languages");
+let languages = document.querySelector(".languages");
 let link = document.querySelectorAll(".languages a");
+let attr = document.querySelector(".languages .active").getAttribute("language");
 
 let homeNavButton = document.querySelector(".banner .homeNavButton");
 let aboutMeNavButton = document.querySelector(".banner .aboutMeNavButton");
@@ -29,40 +30,40 @@ let jumpDescription = document.querySelector(".jump .gameDescriptionText");
 let goHomeButtonText = document.querySelector(".footerHomeButton button");
 let developmentGameButton = document.querySelector(".gamesItemButton button");
 
-link.forEach(el=>{
+link.forEach(el => {
      el.addEventListener("click", () => {
-        langs.querySelector(".active").classList.remove("active");
+        languages.querySelector(".active").classList.remove("active");
         el.classList.add("active");
 
-        let attr = el.getAttribute("language")
+        attr = el.getAttribute("language");
 
-        homeNavButton.textContent = data[attr].homeNavButton
-        aboutMeNavButton.textContent = data[attr].aboutMeNavButton
-        gamesNavButton.textContent = data[attr].gamesNavButton
-        contactsNavButton.textContent = data[attr].contactsNavButton
-        homeSubTitle.textContent = data[attr].homeSubTitle
-        homeDescription.textContent = data[attr].homeDescription
-        aboutSubTitle.textContent = data[attr].aboutSubTitle
-        aboutDescription.textContent = data[attr].aboutDescription
-        aboutButtonText.textContent = data[attr].aboutButtonText
-        rogueSynopsis.textContent = data[attr].rogueSynopsis
-        rogueDescription.textContent = data[attr].rogueDescription
-        horrorSynopis.textContent = data[attr].horrorSynopis
-        horrorDescription.textContent = data[attr].horrorDescription
-        origensSynopsis.textContent = data[attr].origensSynopsis
-        origensDescription.textContent = data[attr].origensDescription
-        arrowSynopsis.textContent = data[attr].arrowSynopsis
-        arrowDescription.textContent = data[attr].arrowDescription
-        overthrowSynopsis.textContent = data[attr].overthrowSynopsis
-        overthrowDescription.textContent = data[attr].overthrowDescription
-        claudioSynopsis.textContent = data[attr].claudioSynopsis
-        claudioDescription.textContent = data[attr].claudioDescription
-        fruitsSynopsis.textContent = data[attr].fruitsSynopsis
-        fruitsDescription.textContent = data[attr].fruitsDescription
-        jumpSynopsis.textContent = data[attr].jumpSynopsis
-        jumpDescription.textContent = data[attr].jumpDescription
-        goHomeButtonText.textContent = data[attr].goHomeButtonText
-        developmentGameButton.textContent = data[attr].developmentGameButton
+        homeNavButton.textContent = data[attr].homeNavButton;
+        aboutMeNavButton.textContent = data[attr].aboutMeNavButton;
+        gamesNavButton.textContent = data[attr].gamesNavButton;
+        contactsNavButton.textContent = data[attr].contactsNavButton;
+        homeSubTitle.textContent = data[attr].homeSubTitle;
+        homeDescription.textContent = data[attr].homeDescription;
+        aboutSubTitle.textContent = data[attr].aboutSubTitle;
+        aboutDescription.textContent = data[attr].aboutDescription;
+        aboutButtonText.textContent = data[attr].aboutButtonText;
+        rogueSynopsis.textContent = data[attr].rogueSynopsis;
+        rogueDescription.textContent = data[attr].rogueDescription;
+        horrorSynopis.textContent = data[attr].horrorSynopis;
+        horrorDescription.textContent = data[attr].horrorDescription;
+        origensSynopsis.textContent = data[attr].origensSynopsis;
+        origensDescription.textContent = data[attr].origensDescription;
+        arrowSynopsis.textContent = data[attr].arrowSynopsis;
+        arrowDescription.textContent = data[attr].arrowDescription;
+        overthrowSynopsis.textContent = data[attr].overthrowSynopsis;
+        overthrowDescription.textContent = data[attr].overthrowDescription;
+        claudioSynopsis.textContent = data[attr].claudioSynopsis;
+        claudioDescription.textContent = data[attr].claudioDescription;
+        fruitsSynopsis.textContent = data[attr].fruitsSynopsis;
+        fruitsDescription.textContent = data[attr].fruitsDescription;
+        jumpSynopsis.textContent = data[attr].jumpSynopsis;
+        jumpDescription.textContent = data[attr].jumpDescription;
+        goHomeButtonText.textContent = data[attr].goHomeButtonText;
+        developmentGameButton.textContent = data[attr].developmentGameButton;
      })
 })
 
@@ -109,7 +110,7 @@ let data = {
         aboutSubTitle: "Sobre mim",
         aboutDescription: "Eu trabalho profissionalmente como desenvolvedor de jogos a mais de dois anos usando o motor gráfico Unity e C#. Atualmente estou trabalhando com um time de desenvolvedores brasileiros no jogo Rogue Masters, atuando como programador de networking.",
         aboutButtonText: "Sobre mim",
-        backButtonText: "About me",
+        backButtonText: "Voltar",
         rogueSynopsis: "\"Rogue Masters é um jogo cooperativo de até 6 jogadores com combate estilo souls-like.\"",
         rogueDescription: "Esse é o projeto que estou trabalhando atualmente. Eu atuo principalmente na parte de networking, sou responsável pela sincronização das mecânicas de gameplay e pelo desenvolvimento e otimização na infraestrutura do código do projeto.",
         horrorSynopis: "\"Where Are You é um jogo de terror cooperativo com suporte de até 4 jogadores. Seu objetivo é investigar casas mal assombradas e exorcizar o fantasma que a assombra.\"",
@@ -132,9 +133,10 @@ let data = {
 }
 
 function toggleElements(){
-    var homeElement = document.getElementById("homeDescription");
+    let homeElement = document.getElementById("homeDescription");
+    let homeElementIsHidden = homeElement.getAttribute("hidden");
 
-    if (homeElement.getAttribute("hidden")){
+    if (homeElementIsHidden){
         hideAboutElement();
         return;
     }
@@ -143,27 +145,40 @@ function toggleElements(){
 }
 
 function hideAboutElement(){
-    var homeElement = document.getElementById("homeDescription");
-    var aboutElement = document.getElementById("aboutDescription");
+    let homeElement = document.getElementById("homeDescription");
+    let aboutElement = document.getElementById("aboutDescription");
 
     homeElement.removeAttribute("hidden");
     aboutElement.setAttribute("hidden", "hidden");
 
     slideProfilePicture("slideLeft");
+
+    setAboutButtonText(false);
 }
 
 function hideHomeElement(){
-    var aboutElement = document.getElementById("aboutDescription");
-    var homeElement = document.getElementById("homeDescription");
+    let aboutElement = document.getElementById("aboutDescription");
+    let homeElement = document.getElementById("homeDescription");
     
     aboutElement.removeAttribute("hidden");
     homeElement.setAttribute("hidden", "hidden");
     
     slideProfilePicture("slideRight");
+
+    setAboutButtonText(true);
 }
 
 function slideProfilePicture(side){
-    var profileContainer = document.getElementById('profileContainer');
+    let profileContainer = document.getElementById('profileContainer');
 
     profileContainer.style.animation= side += " 0.2s linear";
+}
+
+function setAboutButtonText(homeElementIsHidden){
+    if(homeElementIsHidden == true){
+        aboutButtonText.textContent = data[attr].backButtonText;
+    }
+    else{
+        aboutButtonText.textContent = data[attr].aboutButtonText;
+    }
 }

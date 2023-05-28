@@ -187,6 +187,10 @@ button:hover {
     align-items: center;
 }
 
+.languages a:hover {
+    cursor: pointer;
+}
+
 .languages img {
     width: 28px;
     height: 28px;
