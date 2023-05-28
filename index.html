@@ -1,30 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="icon" href="./img/profile.jpg">
-    <script src="./js/script.js"></script>
     <title>Wendell Leão</title>
 </head>
 <body background="./img/bg.webp">
     <header id="home">
+        <div class="langs">
+            <a href="#" language="english">ENG</a>
+            <a href="#" language="portuguese">PT-BR</a>
+        </div>
         <div class="line"></div>
         <nav class="banner">
             <ul>
                 <li>
-                    <a href="#home" onclick="hideAboutElement(this)">Início</a>
+                    <a class="homeNavButton" href="#home" onclick="hideAboutElement(this)">Home</a>
                 </li>
                 <li>
-                    <a href="#about" onclick="hideHomeElement(this)">Sobre mim</a>
+                    <a class="aboutMeNavButton" href="#about" onclick="hideHomeElement(this)">About me</a>
                 </li>
                 <li>
-                    <a href="#games">Jogos</a>
+                    <a class="gamesNavButton" href="#games">Games</a>
                 </li>
                 <li>
-                    <a href="#contact">Contatos</a>
+                    <a class="contactsNavButton" href="#contact">Contacts</a>
                 </li>
             </ul>
         </nav>
@@ -32,7 +35,7 @@
     <main>
         <div class="home">
             <div class="homeText">
-                <div id="homeDescription">
+                <div class="homeDescriptionContainer" id="homeDescription">
                     <div class="homeDescriptionH2">
                         <h2 class="animatable">
                             Game Developer
@@ -42,9 +45,7 @@
                         Wendell Leão
                     </h1>
                     <p class="slideDescription">
-                        Eu sou um programador de 21 anos de idade, <br>
-                        apaixonado por tecnologia, um grande amante <br>
-                        de café e apreciador de jogos souls-like.
+                        I'm a 21-year-old programmer, passionate about technology, a big coffee lover and lover of souls-like games.
                     </p>
                     <div class="homeContacts slideContacts">
                         <ul>
@@ -62,13 +63,10 @@
                 </div>
                 <div class="aboutDescription" id="aboutDescription" hidden>
                     <h1 class="slideH1">
-                        Sobre mim
+                        About me
                     </h1>
                     <p class="animatable">
-                        Eu trabalho profissionalmente como desenvolvedor de jogos a <br> 
-                        mais de dois anos usando o motor gráfico <mark class="blue">Unity</mark> e <mark class="blue">C#</mark>. Atualmente <br> 
-                        estou trabalhando com um time de desenvolvedores brasileiros no <br>
-                        jogo <a href="#games">Rogue Masters</a>, atuando como programador de networking.
+                        I have been working professionally as a game developer for over two years using the Unity and C# graphics engine. I am currently working with a team of Brazilian developers on the game Rogue Masters, acting as a networking programmer.
                     </p>
                 </div>
             </div>
@@ -78,7 +76,7 @@
         </div>
         <div class="aboutButton">
             <button id="aboutButton" type="submit" onclick="toggleElements(this)">
-                + Sobre mim
+                About me
             </button>
         </div>
         <div class="games" id="games">
@@ -315,5 +313,6 @@
             </button>
         </div>
     </footer>
+    <script src="./js/script.js"></script>
 </body>
 </html>
