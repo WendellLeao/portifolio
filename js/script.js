@@ -27,6 +27,7 @@ let fruitsDescription = document.querySelector(".fruits .gameDescriptionText");
 let jumpSynopsis = document.querySelector(".jump em p");
 let jumpDescription = document.querySelector(".jump .gameDescriptionText");
 let goHomeButtonText = document.querySelector(".footerHomeButton button");
+let developmentGameButton = document.querySelector(".gamesItemButton button");
 
 link.forEach(el=>{
      el.addEventListener("click", () => {
@@ -61,6 +62,7 @@ link.forEach(el=>{
         jumpSynopsis.textContent = data[attr].jumpSynopsis
         jumpDescription.textContent = data[attr].jumpDescription
         goHomeButtonText.textContent = data[attr].goHomeButtonText
+        developmentGameButton.textContent = data[attr].developmentGameButton
      })
 })
 
@@ -92,7 +94,8 @@ let data = {
         fruitsDescription: "Another personal project that I developed to practice. My main goal with this project was to develop a simple game with fun and fluid mechanics. The art was purchased in a free asset store.",
         jumpSynopsis: "Jump the obstacles and beat the platform challenges to advance to the next stage.",
         jumpDescription: "This project is a remake of the first game I've ever developed. The goal was to compare how much I evolved as a programmer in a one-year period of studies. I did the whole game myself.",
-        goHomeButtonText: "Home" 
+        goHomeButtonText: "Home" ,
+        developmentGameButton: "In development!",
      },
      portuguese: 
      {
@@ -121,7 +124,8 @@ let data = {
         fruitsDescription: "Enfrente os inimigos e colete todas as frutas para avançar para a próxima fase nesse lindo jogo de plataforma 2D.",
         jumpSynopsis: "Pule os obstáculos e vença os desafios de plataforma para avançar para a próxima fase.",
         jumpDescription: "Esse projeto é um remake do primeiro jogo que eu já desenvolvi. O objetivo foi comparar o quanto eu evolui como programador em um período de um ano de estudos. Fiz o jogo inteiro sozinho.",
-        goHomeButtonText: "Início" 
+        goHomeButtonText: "Início",
+        developmentGameButton: "Em desenvolvimento!",
      }
 }
 
