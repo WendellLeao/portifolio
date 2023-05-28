@@ -79,9 +79,8 @@ footer p {
 }
 
 nav {
-    padding-right: 15px;
+    margin-right: 15px;
     width: 94%;
-    right: 0;
 }
 
 nav ul {
@@ -181,6 +180,10 @@ button:hover {
     display: flex;
     padding-top: 20px;
     width: 100%;
+}
+
+.languages {
+    width: 100px;
 }
 
 .languages a {
