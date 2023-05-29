@@ -475,6 +475,7 @@ button:hover {
 }
 
 .homeDescriptionContainer p {
+    float: right;
     width: 600px;
 }
 
