@@ -488,6 +488,7 @@ button:hover {
 }
 
 .aboutDescription p {
+    float: right;
     width: 900px;
 }
 
