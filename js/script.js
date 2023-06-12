@@ -44,7 +44,7 @@ let data = {
         homeSubTitle: "Game Developer",
         homeDescription: "I'm a 21-year-old Brazilian developer. Epecialist in Unity and the C# language.",
         aboutSubTitle: "About me",
-        aboutDescription: "I have been a game developer for over 2 years. I am currently part of a Brazilian team working on the game Rogue Masters, acting mainly as a networking programmer.",
+        aboutDescription: "I've been a game developer for over 2 years. I'm currently part of a Brazilian team working on the game Rogue Masters, acting as a networking programmer.",
         aboutButtonText: "About me",
         backButtonText: "Back",
         rogueSynopsis: "\"Rogue Masters is a cooperative game of up to 6 players with souls-like style combat.\"",
